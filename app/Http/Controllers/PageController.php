@@ -9,7 +9,12 @@ class PageController extends Controller
     //
     public function index(){
         return view('home');
-        $movies = \app\Movie::All();
+        // $movies = \app\Movie::All();
+        // dd($movies);
+    }
+
+    public function list(){
+        $movies = \App\Movie::all();
         dd($movies);
     }
 }
