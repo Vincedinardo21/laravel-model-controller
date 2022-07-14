@@ -8,13 +8,15 @@ class PageController extends Controller
 {
     //
     public function index(){
-        return view('home');
+        
+        $movies = \App\Movie::all();
+        return view('home', compact('movies'));
         // $movies = \app\Movie::All();
         // dd($movies);
     }
 
     public function list(){
-        $movies = \App\Movie::all();
-        dd($movies);
+        //$movies = \App\Movie::all();
+        //dd($movies);
     }
 }
