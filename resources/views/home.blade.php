@@ -7,9 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <section>
+    <section class="movie-container">
         @foreach($movies as $movie)
-            <li>{{$movie->title}}</li>
+            <div class="movie-card">
+                <div><b>Titolo: </b>{{$movie->title}}</div>
+                <div><b>Titolo originale: </b>{{$movie->original_title}}</div>
+                <div><b>Nazionalità: </b>{{$movie->nationality}}</div>
+                <div><b>Data: </b>{{$movie->date}}</div>
+                <div><b>Voto: </b>{{$movie->vote}}</div>
+            </div>          
         @endforeach
     </section>
 </body>

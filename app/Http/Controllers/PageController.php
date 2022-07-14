@@ -6,17 +6,8 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    //
-    public function index(){
-        
+    public function index(){   
         $movies = \App\Movie::all();
         return view('home', compact('movies'));
-        // $movies = \app\Movie::All();
-        // dd($movies);
-    }
-
-    public function list(){
-        //$movies = \App\Movie::all();
-        //dd($movies);
     }
 }
